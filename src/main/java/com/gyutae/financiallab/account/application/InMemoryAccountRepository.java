@@ -8,6 +8,10 @@ import org.springframework.stereotype.Repository;
 
 import com.gyutae.financiallab.account.domain.Account;
 
+/**
+ * 인메모리 계좌 저장소
+ * 구현클래스여서 @Repository를 붙여서 스프링이 알아서 만들어줌
+ */
 @Repository // 이걸붙이면 new InMemoryAccountRepository() 안해도 스프링이 알아서 만들어줌
 public class InMemoryAccountRepository implements AccountRepository { // 이 클래스가 레포 인터페이스의 약속을 구현한다
 	private final Map<Long, Account> accounts = new ConcurrentHashMap<>();

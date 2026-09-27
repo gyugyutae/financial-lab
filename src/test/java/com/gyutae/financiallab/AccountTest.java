@@ -8,7 +8,9 @@ import java.math.BigDecimal;
 import org.junit.jupiter.api.Test;
 
 import com.gyutae.financiallab.account.application.AccountNotFoundException;
+import com.gyutae.financiallab.account.application.AccountRepository;
 import com.gyutae.financiallab.account.application.AccountService;
+import com.gyutae.financiallab.account.application.InMemoryAccountRepository;
 import com.gyutae.financiallab.account.application.TransferResult;
 import com.gyutae.financiallab.account.domain.Account;
 import com.gyutae.financiallab.account.domain.InsufficientBalanceException;
@@ -97,7 +99,9 @@ public class AccountTest {
 	@Test
 	void transfer() {
 		// given
-		AccountService accountService = new AccountService(); // accountservice객체를 생성해야 create transfer를 호출할수있음
+		AccountService accountService = new AccountService(new InMemoryAccountRepository()); // accountservice객체를 생성해야
+																								// create transfer를
+																								// 호출할수있음
 		Account fromAccount = accountService.createAccount(new BigDecimal("10000"));
 		Account toAccount = accountService.createAccount(new BigDecimal("5000"));
 		TransferResult result = accountService.transfer(fromAccount.getId(), toAccount.getId(), new BigDecimal("3000")); // when
@@ -118,7 +122,7 @@ public class AccountTest {
 
 	@Test
 	void transferInsufficientBalance() {
-		AccountService accountService = new AccountService();
+		AccountService accountService = new AccountService(new InMemoryAccountRepository());
 		Account fromAccount = accountService.createAccount(new BigDecimal("10000"));
 		Account toAccount = accountService.createAccount(new BigDecimal("5000"));
 		// when
@@ -131,7 +135,7 @@ public class AccountTest {
 
 	@Test
 	void transferNotFoundAccount() {
-		AccountService accountService = new AccountService();
+		AccountService accountService = new AccountService(new InMemoryAccountRepository());
 		Account fromAccount = accountService.createAccount(new BigDecimal("27000"));
 		// when
 		assertThatThrownBy(
@@ -142,12 +146,30 @@ public class AccountTest {
 
 	@Test
 	void transferSameAccount() {
-		AccountService accountService = new AccountService();
+		AccountService accountService = new AccountService(new InMemoryAccountRepository());
 		Account fromAccount = accountService.createAccount(new BigDecimal("10000"));
 		// when
 		assertThatThrownBy(
 				() -> accountService.transfer(fromAccount.getId(), fromAccount.getId(), new BigDecimal("1000")))
 				.isInstanceOf(IllegalArgumentException.class);
 		assertThat(fromAccount.getBalance()).isEqualByComparingTo(new BigDecimal("10000"));
+	}
+
+	@Test
+	void saveAndFindAccount() {
+		AccountRepository accountRepository = new InMemoryAccountRepository();
+		Account account = new Account(1L, new BigDecimal("10000"));
+		accountRepository.save(account);
+
+		Account retrievedAccount = accountRepository.findById(1L).orElseThrow(); // 계좌가 있으면 optional에서 account를 꺼내고 없으면
+																					// 예외를 던짐
+		assertThat(retrievedAccount.getBalance()).isEqualByComparingTo("10000");
+		assertThat(retrievedAccount.getId()).isEqualTo(1L);
+	}
+
+	@Test
+	void NotFoundAccount() {
+		AccountRepository accountRepository = new InMemoryAccountRepository(); // 인메모리가 어카운트레포를 구현했으므로 인스턴스를 생성해서
+		assertThat(accountRepository.findById(1L)).isEmpty();
 	}
 }
