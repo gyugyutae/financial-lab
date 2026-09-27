@@ -141,7 +141,7 @@ public class AccountTest {
 	}
 
 	@Test
-	void tranferSameAccount() {
+	void transferSameAccount() {
 		AccountService accountService = new AccountService();
 		Account fromAccount = accountService.createAccount(new BigDecimal("10000"));
 		// when

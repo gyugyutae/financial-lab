@@ -24,5 +24,8 @@ Read the project hub before substantial project guidance. Treat source code and 
 
 - Keep the long-term objective visible: transaction integrity, ledger correctness, idempotency, concurrency, SQL/JPA, tests, and operations.
 - Do not describe planned features as implemented. The current in-memory `ConcurrentHashMap` implementation is not persistent storage and does not provide database transaction rollback.
-- When the user confirms a meaningful milestone, help record the date, goal/invariant, user's decisions and implementation, obstacle and resolution, verification evidence, AI contribution boundary, learned concepts, and next step in the Wiki project hub. Do not turn every short Q&A into a journal entry.
+- Do not update the Wiki project log after each completed feature, test review, or short Q&A. A completion message alone is not a request to record it.
+- Only when the user explicitly asks to close or record the day's work, batch that day's milestones into one daily entry in the Wiki project hub and update the Wiki activity log.
+- At daily close, distinguish code/test evidence from the user's reported intent and learning. Do not infer personal decisions or learning; ask about missing information first.
+- When preparing a daily entry, ask up to three concise, relevant follow-up questions for high-value portfolio evidence. Always include at least one prompt about a missing decision/trade-off, failure diagnosis, measurable verification, or limitation. Do not ask for facts already established; mark unanswered evidence as unconfirmed.
 - Portfolio claims must match code the user can explain and evidence they have actually verified.
