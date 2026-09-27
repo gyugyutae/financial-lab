@@ -1,7 +1,6 @@
 package com.gyutae.financiallab.account.application;
 
 import java.math.BigDecimal;
-import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.stereotype.Service;
@@ -13,21 +12,25 @@ import com.gyutae.financiallab.account.domain.Account;
 @Service // 이걸붙이면 new AccountService() 안해도 스프링이 알아서 만들어줌
 public class AccountService {
 	private final AtomicLong idGenerator = new AtomicLong(1);
-	private final ConcurrentHashMap<Long, Account> accounts = new ConcurrentHashMap<>();
+	private final AccountRepository accounts; // accountrepository 타입으로 필드를 둚. final: 이 필드는 생성자에서 초기화되면 바꾸지 않음
+
+	public AccountService(AccountRepository accounts) { // 생성자에서 accountrepository를 주입받음. 매개변수로 accountrepository타입을 받아야
+														// 함. 스프링이 알아서 구현체를 찾아서 주입해줌
+		this.accounts = accounts; // 이렇게 생성자 주입을하면 @repo가 붙은 메모리구현체를 만들고 @service가 붙은 서비스에 주입해줌
+	}
 
 	public Account createAccount(BigDecimal initialBalance) {
 		Long id = idGenerator.getAndIncrement();
 		Account account = new Account(id, initialBalance);
-		accounts.put(id, account);
+		accounts.save(account); // 계좌를 저장소에 저장
 		return account;
 	}
 
 	public Account findAccount(Long id) {
-		Account account = accounts.get(id);
-		if (account == null) {
-			throw new AccountNotFoundException(id); // throw: 예외를 호출한쪽으로 전달하며 실행을 중단
-		}
-		return account;
+		return accounts.findById(id).orElseThrow(() -> new AccountNotFoundException(id)); // 계좌가 없으면 예외를 던짐 ()는 람다식
+																							// 매개변수가 0개이고 ->는 이동작을 실행하면
+																							// 오른쪽결과를 제공한다
+		// 계좌가 없으면 예외를 던짐
 	}
 
 	public Account deposit(Long id, BigDecimal amount) {

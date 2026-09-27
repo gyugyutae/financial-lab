@@ -13,3 +13,4 @@ public interface AccountRepository { // 인터페이스로 두는 이유는 저�
 }
 // repo는 저장방식만 담당한다 그래서 optional로 있음 없음만 반한다 서비스는 없으면 notFOundException을 던짐
 // 서비스가 레포에 요청만 보내면되니까 저장방식을 나중에 바꿀때 서비스를 손안보고 레포만 손보면된다
+// 인터페이스로 두는 이유는 저장소가 제공할 기능의 약속. 메서드의 약속만 선언하고 실제동작은 Inmemory에서 구현함
