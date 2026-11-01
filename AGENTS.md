@@ -10,7 +10,7 @@ Read the project hub before substantial project guidance:
 Consult the original roadmap when planning scope or stages:
 `C:\Users\kym70\OneDrive\Desktop\cmds-llm-wiki-work\30. Queries\2026-09-13-Q-java-bank-transfer-ledger-portfolio-design.md`
 
-Use the [five-page financial backend portfolio draft](<금융 백엔드 포트폴리오 5장 원고.md>) in the project root as the long-term target when planning and coaching. Read the local draft when giving substantial guidance, then inspect the current code, configuration, and tests to identify the next achievable step. Its four individual cases cover concurrent transfers, transaction rollback, lost-response recovery, and reconciliation; the fifth is a separate, undecided team project. Break the target into small prerequisites and connect each next task to a financial invariant and verifiable evidence.
+Use the [five-page financial backend portfolio draft](<./금융 백엔드 포트폴리오 5장 원고.md>) as the long-term target when planning and coaching. This path is relative to the project root. Read the local draft when giving substantial guidance, then inspect the current code, configuration, and tests to identify the next achievable step. Its four individual cases cover concurrent transfers, transaction rollback, lost-response recovery, and reconciliation; the fifth is a separate, undecided team project. Break the target into small prerequisites and connect each next task to a financial invariant and verifiable evidence.
 
 The draft and roadmap express adjustable goals, not completed work or measured results. Use current code and test results as implementation evidence; distinguish observed results from assumptions and user reports. Do not invent failures, performance numbers, or contributions to match the draft.
 
