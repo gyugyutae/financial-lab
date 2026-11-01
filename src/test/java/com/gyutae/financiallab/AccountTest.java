@@ -172,4 +172,11 @@ public class AccountTest {
 		AccountRepository accountRepository = new InMemoryAccountRepository(); // 인메모리가 어카운트레포를 구현했으므로 인스턴스를 생성해서
 		assertThat(accountRepository.findById(1L)).isEmpty();
 	}
+
+	@Test
+	void createAccount() {
+		Account account = new Account(new BigDecimal("10000"));
+		assertThat(account.getId()).isNull();
+		assertThat(account.getBalance()).isEqualByComparingTo(new BigDecimal("10000"));
+	}
 }
