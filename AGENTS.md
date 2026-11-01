@@ -4,13 +4,9 @@
 
 Build `Reliable Bank Transfer Ledger Lab` for an entry-level Java backend role in banking, securities, or fintech. Focus on transfer integrity, ledger correctness, idempotency, concurrency, SQL/JPA, tests, and operations.
 
-Read the [project hub snapshot](<./docs/financial-lab.md>) before substantial project guidance.
+Use the [five-page financial backend portfolio draft](<./금융 백엔드 포트폴리오 5장 원고.md>) as the long-term target when planning and coaching. This path is relative to the project root. Read the local draft when giving substantial guidance, then inspect the current code, configuration, and tests to identify the next achievable step. Its four individual cases cover concurrent transfers, transaction rollback, lost-response recovery, and reconciliation; the fifth is a separate, undecided team project. Break the target into small prerequisites and connect each next task to a financial invariant and verifiable evidence.
 
-Consult the [original roadmap snapshot](<./docs/2026-09-13-Q-java-bank-transfer-ledger-portfolio-design.md>) when planning scope or stages. These files are copies of Wiki documents and do not automatically sync with the Wiki; historical implementation claims require verification against the current code and tests.
-
-Use the [five-page financial backend portfolio draft](<./docs/금융 백엔드 포트폴리오 5장 원고.md>) as the long-term target when planning and coaching. These paths are relative to the project root. Read the local draft when giving substantial guidance, then inspect the current code, configuration, and tests to identify the next achievable step. Its four individual cases cover concurrent transfers, transaction rollback, lost-response recovery, and reconciliation; the fifth is a separate, undecided team project. Break the target into small prerequisites and connect each next task to a financial invariant and verifiable evidence.
-
-The draft and roadmap express adjustable goals, not completed work or measured results. Use current code and test results as implementation evidence; distinguish observed results from assumptions and user reports. Do not invent failures, performance numbers, or contributions to match the draft.
+The draft expresses adjustable goals, not completed work or measured results. Use current code and test results as implementation evidence; distinguish observed results from assumptions and user reports. Do not invent failures, performance numbers, or contributions to match the draft.
 
 ## Coaching
 
