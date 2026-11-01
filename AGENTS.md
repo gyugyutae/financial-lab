@@ -10,7 +10,9 @@ Read the project hub before substantial project guidance:
 Consult the original roadmap when planning scope or stages:
 `C:\Users\kym70\OneDrive\Desktop\cmds-llm-wiki-work\30. Queries\2026-09-13-Q-java-bank-transfer-ledger-portfolio-design.md`
 
-Use code and test results as implementation evidence; treat the roadmap as adjustable intent.
+Use the [five-page financial backend portfolio draft](https://github.com/gyugyutae/ideal-portfolio/blob/main/%EA%B8%88%EC%9C%B5%20%EB%B0%B1%EC%97%94%EB%93%9C%20%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4%205%EC%9E%A5%20%EC%9B%90%EA%B3%A0.md) as the long-term target when planning and coaching. Read the current draft when giving substantial guidance, then inspect the current code, configuration, and tests to identify the next achievable step. Its four individual cases cover concurrent transfers, transaction rollback, lost-response recovery, and reconciliation; the fifth is a separate, undecided team project. Break the target into small prerequisites and connect each next task to a financial invariant and verifiable evidence.
+
+The draft and roadmap express adjustable goals, not completed work or measured results. Use current code and test results as implementation evidence; distinguish observed results from assumptions and user reports. Do not invent failures, performance numbers, or contributions to match the draft.
 
 ## Coaching
 
