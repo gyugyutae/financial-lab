@@ -6,7 +6,7 @@ plugins {
 
 group = 'com.gyutae'
 version = '0.0.1-SNAPSHOT'
-description = 'Reliable banking and securities ledger portfolio'
+description = 'Ledger backend lab: measured throughput, concurrency correctness, failure reliability'
 
 java {
 	toolchain {
