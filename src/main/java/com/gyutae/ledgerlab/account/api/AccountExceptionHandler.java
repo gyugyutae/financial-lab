@@ -1,12 +1,12 @@
-package com.gyutae.financiallab.account.api;
+package com.gyutae.ledgerlab.account.api;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
-import com.gyutae.financiallab.account.application.AccountNotFoundException;
-import com.gyutae.financiallab.account.domain.InsufficientBalanceException;
+import com.gyutae.ledgerlab.account.application.AccountNotFoundException;
+import com.gyutae.ledgerlab.account.domain.InsufficientBalanceException;
 
 /**
  * 계좌 관련 예외를 처리하는 클래스

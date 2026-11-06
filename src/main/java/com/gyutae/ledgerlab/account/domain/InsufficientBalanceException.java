@@ -1,4 +1,4 @@
-package com.gyutae.financiallab.account.domain;
+package com.gyutae.ledgerlab.account.domain;
 
 public class InsufficientBalanceException extends RuntimeException {
     public InsufficientBalanceException() {

@@ -1,4 +1,4 @@
-package com.gyutae.financiallab.account.application;
+package com.gyutae.ledgerlab.account.application;
 
 import java.util.Map;
 import java.util.Optional;
@@ -6,7 +6,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 import org.springframework.stereotype.Repository;
 
-import com.gyutae.financiallab.account.domain.Account;
+import com.gyutae.ledgerlab.account.domain.Account;
 
 /**
  * 인메모리 계좌 저장소

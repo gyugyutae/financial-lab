@@ -1,10 +1,10 @@
-package com.gyutae.financiallab;
+package com.gyutae.ledgerlab;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class FinancialLabApplicationTests {
+class LedgerLabApplicationTests {
 
 	@Test
 	void contextLoads() {

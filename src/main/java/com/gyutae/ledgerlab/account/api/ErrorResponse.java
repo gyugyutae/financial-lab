@@ -1,4 +1,4 @@
-package com.gyutae.financiallab.account.api;
+package com.gyutae.ledgerlab.account.api;
 
 /**
  * 에러 응답을 나타내는 레코드

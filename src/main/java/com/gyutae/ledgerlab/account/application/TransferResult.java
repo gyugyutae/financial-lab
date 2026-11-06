@@ -1,6 +1,6 @@
-package com.gyutae.financiallab.account.application;
+package com.gyutae.ledgerlab.account.application;
 
-import com.gyutae.financiallab.account.domain.Account;
+import com.gyutae.ledgerlab.account.domain.Account;
 
 public record TransferResult(
 		Account fromAccount,

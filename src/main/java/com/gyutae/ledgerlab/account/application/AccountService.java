@@ -1,11 +1,11 @@
-package com.gyutae.financiallab.account.application;
+package com.gyutae.ledgerlab.account.application;
 
 import java.math.BigDecimal;
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.stereotype.Service;
 
-import com.gyutae.financiallab.account.domain.Account;
+import com.gyutae.ledgerlab.account.domain.Account;
 
 //application: 계좌 생성·조회 같은 업무 흐름
 //실제 api에서는 사용자가 만들지않고 서비스가 자동으로 ID를 생성함

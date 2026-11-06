@@ -1,8 +1,8 @@
-package com.gyutae.financiallab.account.application;
+package com.gyutae.ledgerlab.account.application;
 
 import java.util.Optional;
 
-import com.gyutae.financiallab.account.domain.Account;
+import com.gyutae.ledgerlab.account.domain.Account;
 
 public interface AccountRepository { // 인터페이스로 두는 이유는 저장소가 제공할 기능의 약속.
 	void save(Account account);

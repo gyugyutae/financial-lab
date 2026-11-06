@@ -1,13 +1,13 @@
-package com.gyutae.financiallab;
+package com.gyutae.ledgerlab;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FinancialLabApplication {
+public class LedgerLabApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FinancialLabApplication.class, args);
+		SpringApplication.run(LedgerLabApplication.class, args);
 	}
 
 }

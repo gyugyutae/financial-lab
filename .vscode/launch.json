@@ -5,8 +5,8 @@
       "type": "java",
       "name": "Spring Boot: Financial Lab",
       "request": "launch",
-      "mainClass": "com.gyutae.financiallab.FinancialLabApplication",
-      "projectName": "financial-lab",
+      "mainClass": "com.gyutae.ledgerlab.LedgerLabApplication",
+      "projectName": "ledger-reliability-lab",
       "cwd": "${workspaceFolder}",
       "console": "integratedTerminal"
     }

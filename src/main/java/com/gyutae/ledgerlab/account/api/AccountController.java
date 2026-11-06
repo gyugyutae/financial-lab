@@ -1,4 +1,4 @@
-package com.gyutae.financiallab.account.api;
+package com.gyutae.ledgerlab.account.api;
 // controller는 처음에 http로 요청을받으면 json으로 변환해서 request에게 보냄
 
 import java.math.BigDecimal;
@@ -19,9 +19,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.gyutae.financiallab.account.application.AccountService;
-import com.gyutae.financiallab.account.application.TransferResult;
-import com.gyutae.financiallab.account.domain.Account;
+import com.gyutae.ledgerlab.account.application.AccountService;
+import com.gyutae.ledgerlab.account.application.TransferResult;
+import com.gyutae.ledgerlab.account.domain.Account;
 
 @RestController
 @RequestMapping("/accounts") // base url을 지정, /accounts로 시작하는 요청은 이 컨트롤러가 처리

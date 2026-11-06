@@ -1,4 +1,4 @@
-package com.gyutae.financiallab.account.application;
+package com.gyutae.ledgerlab.account.application;
 
 /**
  * 계좌를 찾을 수 없는 경우 발생하는 예외

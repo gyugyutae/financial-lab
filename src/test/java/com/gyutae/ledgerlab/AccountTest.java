@@ -1,4 +1,4 @@
-package com.gyutae.financiallab;
+package com.gyutae.ledgerlab;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
@@ -7,13 +7,13 @@ import java.math.BigDecimal;
 
 import org.junit.jupiter.api.Test;
 
-import com.gyutae.financiallab.account.application.AccountNotFoundException;
-import com.gyutae.financiallab.account.application.AccountRepository;
-import com.gyutae.financiallab.account.application.AccountService;
-import com.gyutae.financiallab.account.application.InMemoryAccountRepository;
-import com.gyutae.financiallab.account.application.TransferResult;
-import com.gyutae.financiallab.account.domain.Account;
-import com.gyutae.financiallab.account.domain.InsufficientBalanceException;
+import com.gyutae.ledgerlab.account.application.AccountNotFoundException;
+import com.gyutae.ledgerlab.account.application.AccountRepository;
+import com.gyutae.ledgerlab.account.application.AccountService;
+import com.gyutae.ledgerlab.account.application.InMemoryAccountRepository;
+import com.gyutae.ledgerlab.account.application.TransferResult;
+import com.gyutae.ledgerlab.account.domain.Account;
+import com.gyutae.ledgerlab.account.domain.InsufficientBalanceException;
 
 public class AccountTest {
 	@Test

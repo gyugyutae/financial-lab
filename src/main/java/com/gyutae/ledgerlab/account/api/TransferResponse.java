@@ -1,4 +1,4 @@
-package com.gyutae.financiallab.account.api;
+package com.gyutae.ledgerlab.account.api;
 
 import java.math.BigDecimal;
 

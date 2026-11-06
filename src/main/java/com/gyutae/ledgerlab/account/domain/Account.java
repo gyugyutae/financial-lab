@@ -1,4 +1,4 @@
-package com.gyutae.financiallab.account.domain;
+package com.gyutae.ledgerlab.account.domain;
 // balance는 입금하면 증가 출금하면 감소 잔액보다 많이 출금하면 InsufficientBalanceException 발생 0원보다작은 금액은 입출금할수없다.
 
 import java.math.BigDecimal;

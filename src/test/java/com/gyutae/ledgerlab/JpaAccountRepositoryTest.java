@@ -1,4 +1,4 @@
-package com.gyutae.financiallab;
+package com.gyutae.ledgerlab;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -8,8 +8,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.gyutae.financiallab.account.application.JpaAccountRepository;
-import com.gyutae.financiallab.account.domain.Account;
+import com.gyutae.ledgerlab.account.application.JpaAccountRepository;
+import com.gyutae.ledgerlab.account.domain.Account;
 
 @SpringBootTest
 class JpaAccountRepositoryTest {
